@@ -1,0 +1,38 @@
+<!-- (c) Norfi 2011 - http://norfipc.com -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+  <head>
+    <title>
+      Prueba
+    </title>
+    <script type="text/javascript">
+//<![CDATA[
+    <!-- Begin
+    var start=new Date();
+        start=Date.parse(start)/1000;
+        var counts=10;
+        function CountDown(){
+                var now=new Date();
+                now=Date.parse(now)/1000;
+                var x=parseInt(counts-(now-start),10);
+                if(document.form1){document.form1.clock.value = x;}
+                if(x>0){
+                        timerID=setTimeout("CountDown()", 100)
+                }else{
+                        location.href="http://norfipc.com"
+                }
+        }
+    //  End -->
+    //]]>
+    </script>
+    <script type="text/javascript">
+    window.setTimeout('CountDown()',100);
+    </script>
+  </head>
+  <body>
+    <form name="form1" id="form1">
+      Serás redireccionado en <input type="text" name="clock" size="2" value="10" />segundos
+    </form>
+  </body>
+</html>
